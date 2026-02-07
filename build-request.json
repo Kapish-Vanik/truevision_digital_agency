@@ -1,0 +1,110 @@
+{
+  "kind": "build_request",
+  "title": "Integrate official TrueVision Digital Agency logo across header/footer branding",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-17",
+      "text": "Add the official TrueVision Digital Agency logo as static assets and reference them from a central configuration so the same logo is used consistently across the site.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4",
+          "msg-6"
+        ],
+        "quotes": [
+          "This is the official logo of **TrueVision Digital Agency**.\n\nPlease add this logo to the website:\n- Header (top-left or top-center)\n- Footer\n- Wherever branding is required\n\nMake sure the logo is clearly visible, properly aligned, and matches the premium dark + neon theme of the website."
+        ]
+      },
+      "acceptanceCriteria": [
+        "New logo assets exist under frontend/public/assets/generated and are optimized for web use (reasonable file size, crisp edges).",
+        "frontend/src/config/site.ts exposes logo asset path(s) and alt text (e.g., full brand name) so components do not hardcode logo filenames.",
+        "No page loads the previously hardcoded /assets/generated/truevision-logo-mark.dim_512x512.png unless explicitly kept as a fallback."
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "Update the site header (Navbar) branding to use the official logo with correct alignment and visibility on the premium dark + neon theme, including responsive behavior for mobile vs desktop.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4",
+          "msg-6"
+        ],
+        "quotes": [
+          "Please add this logo to the website:\n- Header (top-left or top-center)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navbar renders the official logo in the left brand area (or top-center on narrow layouts if implemented), linking to the Home route.",
+        "Logo is clearly visible against the dark header (no low-contrast blending) and remains sharp at typical sizes (e.g., ~32–40px height).",
+        "Branding does not break the existing navbar layout across common breakpoints (mobile menu, tablet, desktop)."
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "text": "Update the site footer branding block to use the official logo and ensure it is properly aligned with the brand text and consistent with the premium dark + neon theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4",
+          "msg-6"
+        ],
+        "quotes": [
+          "Please add this logo to the website:\n- Footer"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer brand section renders the official logo with an appropriate size (e.g., ~40–48px height) and aligned with the brand name text.",
+        "Logo remains clearly visible on the footer background and does not appear washed out or too dim.",
+        "Footer continues to render without layout shift or overflow on small screens."
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "text": "Replace any other hardcoded/placeholder branding logo usages (where branding is required) to use the same centrally-configured official logo assets for consistency.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4",
+          "msg-6"
+        ],
+        "quotes": [
+          "- Wherever branding is required"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A search for the previous logo path (/assets/generated/truevision-logo-mark.dim_512x512.png) shows no remaining usage outside any explicit fallback logic.",
+        "All branding logo placements (including header/footer) reference the centralized values from frontend/src/config/site.ts.",
+        "All logo <img> elements use appropriate alt text that includes the full brand name (e.g., \"TrueVision Digital Agency\")."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Do not route logo images through the backend; serve them as static assets from frontend/public."
+  ],
+  "nonGoals": [
+    "Creating new pages or changing site navigation structure.",
+    "Implementing external image hosting/CDN integration.",
+    "Reworking the overall theme beyond what is necessary to keep the logo visible/aligned on the existing dark + neon design."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": [
+      "Remove background to transparent and export a horizontal lockup PNG (IMG_20251121_124542_843.webp > truevision-logo-lockup.dim_600x200.png)",
+      "Remove background to transparent and export a square mark/icon PNG (IMG_20251121_124542_843.webp > truevision-logo-mark.dim_256x256.png)",
+      "Create a high-contrast variant suitable for very dark backgrounds if needed (IMG_20251121_124542_843.webp > truevision-logo-lockup-dark.dim_600x200.png)"
+    ]
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

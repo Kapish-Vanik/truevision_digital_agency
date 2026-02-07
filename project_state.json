@@ -1,0 +1,244 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Build a modern, premium, conversion-focused website for the digital marketing agency \"TrueVision Digital Agency\" with a dark theme and neon lime/green accents, featuring key marketing pages, service showcases, portfolio/case studies, pricing, and lead-generation CTAs (including WhatsApp).",
+  "architectural_notes": [
+    "Mobile-first, fully responsive across devices",
+    "Dark theme with neon lime/green accent system",
+    "Clean/minimal UI with smooth animations and hover effects",
+    "SEO-friendly structure and fast-loading performance as core requirements",
+    "Conversion-focused layout with prominent CTAs including WhatsApp",
+    "Centralize brand name and contact details as site-wide constants/config and reuse across header, footer, CTAs/buttons, and forms to ensure consistency.",
+    "Use the official provided logo asset for site-wide branding (header/footer/brand areas) and ensure it is clearly visible and aligned within the dark + neon design system."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Edit Images\n- Remove background to transparent and export a horizontal lockup PNG (IMG_20251121_124542_843.webp > truevision-logo-lockup.dim_600x200.png)\n- Remove background to transparent and export a square mark/icon PNG (IMG_20251121_124542_843.webp > truevision-logo-mark.dim_256x256.png)\n- Create a high-contrast variant suitable for very dark backgrounds if needed (IMG_20251121_124542_843.webp > truevision-logo-lockup-dark.dim_600x200.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-multi-page-mobile-first-fully-responsive-website-for-truevision-digital-agency-with-the-required-pages-home-about-us-services-portfolio-case-studies-pricing-and-contact-us-using-a-consistent-global-layout-navigation-footer-and-clear-routing-between-pages",
+      "title": "Implement a multi-page, mobile-first, fully responsive website for “TrueVision Digital Agency” with the required pages: Home, About Us, Services, Portfolio / Case Studies, Pricing, and Contact Us, using a consistent global layout (navigation + footer) and clear routing between pages.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-premium-high-end-visual-design-system-dark-theme-base-with-neon-lime-green-accents-clean-minimal-ui-modern-typography-and-cohesive-spacing-add-smooth-animations-and-hover-effects-across-interactive-elements-buttons-cards-links-while-keeping-motion-subtle-and-performance-friendly",
+      "title": "Apply a premium, high-end visual design system: dark theme base with neon lime/green accents, clean minimal UI, modern typography, and cohesive spacing; add smooth animations and hover effects across interactive elements (buttons, cards, links) while keeping motion subtle and performance-friendly.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-home-page-with-conversion-focused-sections-1-hero-with-powerful-headline-and-clear-primary-cta-2-short-value-proposition-describing-how-the-agency-helps-brands-grow-3-services-overview-grid-with-icons-for-each-key-service-category-4-trust-building-sections-process-benefits-results-5-testimonials-social-proof-and-6-strong-call-to-action-buttons-for-whatsapp-and-contact",
+      "title": "Build the Home page with conversion-focused sections: (1) hero with powerful headline and clear primary CTA, (2) short value proposition describing how the agency helps brands grow, (3) services overview grid with icons for each key service category, (4) trust-building sections (process, benefits, results), (5) testimonials/social proof, and (6) strong call-to-action buttons for WhatsApp and Contact.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-about-us-page-content-structure-including-agency-vision-mission-and-values-emphasis-on-results-strategy-and-creativity-and-a-why-choose-truevision-digital-agency-section-with-clear-differentiators",
+      "title": "Create the About Us page content structure including: agency vision, mission, and values; emphasis on results, strategy, and creativity; and a “Why choose TrueVision Digital Agency” section with clear differentiators.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-services-page-that-lists-and-details-the-specified-services-with-a-conversion-focused-layout-that-includes-a-brief-description-and-benefits-for-each-service-plus-clear-ctas-to-contact-for-a-quote-strategy-call",
+      "title": "Create a Services page that lists and details the specified services, with a conversion-focused layout that includes a brief description and benefits for each service, plus clear CTAs to contact for a quote/strategy call.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-portfolio-case-studies-page-with-a-clean-professional-case-study-grid-list-that-showcases-past-work-with-results-and-performance-metrics-e-g-lead-volume-roas-ctr-conversion-rate-and-include-a-case-study-detail-view-or-expandable-sections-per-item",
+      "title": "Create a Portfolio / Case Studies page with a clean, professional case study grid/list that showcases past work with results and performance metrics (e.g., lead volume, ROAS, CTR, conversion rate), and include a case study detail view or expandable sections per item.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-pricing-page-with-clear-transparent-packages-or-sections-and-a-prominent-cta-for-custom-quotes-keeping-the-presentation-premium-and-easy-to-compare",
+      "title": "Create a Pricing page with clear, transparent packages (or sections) and a prominent CTA for custom quotes, keeping the presentation premium and easy to compare.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-contact-us-page-with-a-simple-clean-contact-form-name-email-message-and-optional-phone-a-whatsapp-chat-button-and-a-visible-email-phone-information-section-optimize-layout-for-quick-responses-and-lead-capture",
+      "title": "Create a Contact Us page with a simple, clean contact form (name, email, message, and optional phone), a WhatsApp chat button, and a visible email + phone information section; optimize layout for quick responses and lead capture.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-the-site-fast-loading-and-seo-friendly-for-a-react-spa-by-providing-per-page-document-titles-descriptions-and-basic-social-sharing-metadata-ensuring-semantic-headings-and-accessible-structure-throughout",
+      "title": "Make the site fast-loading and SEO-friendly for a React SPA by providing per-page document titles/descriptions and basic social sharing metadata, ensuring semantic headings and accessible structure throughout.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-premium-visuals-via-generated-static-assets-logo-abstract-hero-section-visuals-and-incorporate-them-into-the-ui-navbar-logo-lockup-hero-background-or-hero-graphic-and-subtle-section-dividers-without-routing-images-through-the-backend",
+      "title": "Add premium visuals via generated static assets (logo + abstract hero/section visuals) and incorporate them into the UI (navbar/logo lockup, hero background or hero graphic, and subtle section dividers) without routing images through the backend.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-global-site-contact-configuration-to-use-the-provided-contact-details-email-phone-whatsapp-instagram-and-customer-support-number-and-ensure-all-ui-contact-links-buttons-pull-from-this-central-config",
+      "title": "Update the global site contact configuration to use the provided contact details (email, phone, WhatsApp, Instagram, and customer support number) and ensure all UI contact links/buttons pull from this central config.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-the-brand-name-truevision-digital-agency-clearly-visible-at-the-very-beginning-of-the-website-by-updating-the-home-page-hero-main-headline-to-lead-with-the-full-brand-name",
+      "title": "Make the brand name “TrueVision Digital Agency” clearly visible at the very beginning of the website by updating the Home page hero main headline to lead with the full brand name.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-clear-phone-and-whatsapp-call-to-action-buttons-on-the-home-page-hero-area-and-or-primary-cta-cluster-using-the-provided-phone-whatsapp-details-and-ensure-these-ctas-are-consistent-with-other-cta-sections",
+      "title": "Add clear phone and WhatsApp call-to-action buttons on the Home page (hero area and/or primary CTA cluster) using the provided phone/WhatsApp details, and ensure these CTAs are consistent with other CTA sections.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-header-navbar-and-footer-to-display-and-link-to-the-provided-contact-details-wherever-contact-information-is-shown-including-email-phone-in-the-footer-and-prominent-contact-access-in-the-header",
+      "title": "Update the header (navbar) and footer to display and link to the provided contact details wherever contact information is shown, including email/phone in the footer and prominent contact access in the header.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-contact-page-and-inquiry-form-ui-use-the-same-provided-contact-details-email-phone-whatsapp-customer-support-and-update-any-placeholders-help-text-that-currently-shows-old-numbers-emails",
+      "title": "Ensure the Contact page and inquiry form UI use the same provided contact details (email, phone, WhatsApp, customer support) and update any placeholders/help text that currently shows old numbers/emails.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-official-truevision-digital-agency-logo-as-static-assets-and-reference-them-from-a-central-configuration-so-the-same-logo-is-used-consistently-across-the-site",
+      "title": "Add the official TrueVision Digital Agency logo as static assets and reference them from a central configuration so the same logo is used consistently across the site.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-header-navbar-branding-to-use-the-official-logo-with-correct-alignment-and-visibility-on-the-premium-dark-neon-theme-including-responsive-behavior-for-mobile-vs-desktop",
+      "title": "Update the site header (Navbar) branding to use the official logo with correct alignment and visibility on the premium dark + neon theme, including responsive behavior for mobile vs desktop.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-footer-branding-block-to-use-the-official-logo-and-ensure-it-is-properly-aligned-with-the-brand-text-and-consistent-with-the-premium-dark-neon-theme",
+      "title": "Update the site footer branding block to use the official logo and ensure it is properly aligned with the brand text and consistent with the premium dark + neon theme.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-any-other-hardcoded-placeholder-branding-logo-usages-where-branding-is-required-to-use-the-same-centrally-configured-official-logo-assets-for-consistency",
+      "title": "Replace any other hardcoded/placeholder branding logo usages (where branding is required) to use the same centrally-configured official logo assets for consistency.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create multi-page agency website: Home, About Us, Services, Portfolio/Case Studies, Pricing, Contact Us",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement premium dark-theme UI with neon lime/green accents, modern typography, smooth animations/hover effects, mobile-first responsive layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Home page sections: hero with strong headline + CTA, value proposition, services overview w/ icons, process/benefits/results trust sections, testimonials/social proof, WhatsApp + Contact CTAs",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Services page: detailed descriptions and benefits for listed services in a conversion-focused layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Portfolio/Case Studies page: showcase past work with results and performance metrics in a clean professional layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Pricing page: transparent packages/pricing with CTA for custom quotes",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Contact page: clean contact form, WhatsApp chat button, email/phone section, quick-response focused layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "SEO-friendly, fast-loading site structure optimized for lead generation and conversions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Implement backend support to receive and persist contact inquiries in the single Motoko actor: store submissions (timestamp + submitted fields) in stable state and expose a public method to create a new inquiry. (No external email/SMS integrations.)",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Ensure strong branding and consistent contact info sitewide: show “TrueVision Digital Agency” prominently in hero headline; add/use email, phone, WhatsApp, Instagram, and support number consistently in header/footer/contact page/CTA sections and inquiry forms; display phone + WhatsApp CTAs clearly on homepage; include email + contact number in footer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Add the official TrueVision Digital Agency logo asset throughout the site: header (top-left or top-center), footer, and other branding placements; ensure clear visibility, proper alignment, and styling consistent with the premium dark + neon theme",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "TrueVision Digital Agency",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

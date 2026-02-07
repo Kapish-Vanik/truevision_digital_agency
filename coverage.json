@@ -1,0 +1,85 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-06T12:56:26.675Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 4,
+    "implemented": 4,
+    "items": [
+      {
+        "id": "REQ-17",
+        "summary": "Add the official TrueVision Digital Agency logo as static assets and reference them from a central configuration so the same logo is used consistently across the site.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/truevision-logo-lockup.dim_600x200.png",
+          "frontend/public/assets/generated/truevision-logo-mark.dim_256x256.png",
+          "frontend/public/assets/generated/truevision-logo-lockup-dark.dim_600x200.png",
+          "frontend/src/config/site.ts"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/truevision-logo-lockup.dim_600x200.png",
+          "frontend/public/assets/generated/truevision-logo-mark.dim_256x256.png",
+          "frontend/public/assets/generated/truevision-logo-lockup-dark.dim_600x200.png",
+          "frontend/src/config/site.ts"
+        ]
+      },
+      {
+        "id": "REQ-18",
+        "summary": "Update the site header (Navbar) branding to use the official logo with correct alignment and visibility on the premium dark + neon theme, including responsive behavior for mobile vs desktop.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/site/BrandLogo.tsx",
+          "frontend/src/components/site/Navbar.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/site/BrandLogo.tsx",
+          "frontend/src/components/site/Navbar.tsx"
+        ]
+      },
+      {
+        "id": "REQ-19",
+        "summary": "Update the site footer branding block to use the official logo and ensure it is properly aligned with the brand text and consistent with the premium dark + neon theme.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/site/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/site/Footer.tsx"
+        ]
+      },
+      {
+        "id": "REQ-20",
+        "summary": "Replace any other hardcoded/placeholder branding logo usages (where branding is required) to use the same centrally-configured official logo assets for consistency.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/site/BrandLogo.tsx",
+          "frontend/src/components/site/Layout.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/site/BrandLogo.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/truevision-logo-lockup-dark.dim_600x200.png",
+    "frontend/public/assets/generated/truevision-logo-lockup.dim_600x200.png",
+    "frontend/public/assets/generated/truevision-logo-mark.dim_256x256.png",
+    "frontend/src/components/site/BrandLogo.tsx",
+    "frontend/src/components/site/Footer.tsx",
+    "frontend/src/components/site/Navbar.tsx",
+    "frontend/src/config/site.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

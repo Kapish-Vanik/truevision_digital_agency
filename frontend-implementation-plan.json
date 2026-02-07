@@ -1,0 +1,96 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Integrate official TrueVision Digital Agency logo across header/footer branding",
+  "requirements": [
+    {
+      "id": "REQ-17",
+      "summary": "Add official TrueVision logo static assets and centralize logo references in site configuration for consistent use across the site.",
+      "acceptanceCriteria": [
+        "New logo assets exist under frontend/public/assets/generated and are optimized for web use (reasonable file size, crisp edges).",
+        "frontend/src/config/site.ts exposes logo asset path(s) and alt text (e.g., full brand name) so components do not hardcode logo filenames.",
+        "No page loads the previously hardcoded /assets/generated/truevision-logo-mark.dim_512x512.png unless explicitly kept as a fallback."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/truevision-logo-lockup.dim_600x200.png",
+          "operation": "create",
+          "description": "Add the official horizontal lockup logo PNG (transparent background), optimized for web use."
+        },
+        {
+          "path": "frontend/public/assets/generated/truevision-logo-mark.dim_256x256.png",
+          "operation": "create",
+          "description": "Add the official square mark/icon logo PNG (transparent background), optimized for web use."
+        },
+        {
+          "path": "frontend/public/assets/generated/truevision-logo-lockup-dark.dim_600x200.png",
+          "operation": "create",
+          "description": "Add a high-contrast horizontal lockup logo PNG variant for very dark backgrounds (transparent background), optimized for web use."
+        },
+        {
+          "path": "frontend/src/config/site.ts",
+          "operation": "modify",
+          "description": "Expose centrally-configured branding logo fields (paths for mark/lockup + dark variant as needed, plus consistent alt text such as \"TrueVision Digital Agency\") so UI components do not hardcode filenames."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Update the Navbar branding to use the official centrally-configured logo with responsive alignment and good contrast on the dark + neon theme.",
+      "acceptanceCriteria": [
+        "Navbar renders the official logo in the left brand area (or top-center on narrow layouts if implemented), linking to the Home route.",
+        "Logo is clearly visible against the dark header (no low-contrast blending) and remains sharp at typical sizes (e.g., ~32–40px height).",
+        "Branding does not break the existing navbar layout across common breakpoints (mobile menu, tablet, desktop)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/site/BrandLogo.tsx",
+          "operation": "create",
+          "description": "Create a reusable brand logo component that reads logo paths + alt text from frontend/src/config/site.ts and supports size/variant props to ensure consistent branding usage across the app."
+        },
+        {
+          "path": "frontend/src/components/site/Navbar.tsx",
+          "operation": "modify",
+          "description": "Replace the hardcoded logo <img> with the reusable BrandLogo component, sourcing logo paths + alt text from frontend/src/config/site.ts; ensure responsive sizing/alignment and adequate visibility against the sticky dark header. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "summary": "Update the Footer branding block to use the official centrally-configured logo with aligned brand text and consistent dark + neon styling.",
+      "acceptanceCriteria": [
+        "Footer brand section renders the official logo with an appropriate size (e.g., ~40–48px height) and aligned with the brand name text.",
+        "Logo remains clearly visible on the footer background and does not appear washed out or too dim.",
+        "Footer continues to render without layout shift or overflow on small screens."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/site/Footer.tsx",
+          "operation": "modify",
+          "description": "Replace the hardcoded logo <img> with the reusable BrandLogo component, sourcing logo paths + alt text from frontend/src/config/site.ts; tune sizing/alignment for the footer brand block and ensure dark-background contrast. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "summary": "Replace any other hardcoded/placeholder branding logo usages to use the centrally-configured official logo assets for consistency site-wide.",
+      "acceptanceCriteria": [
+        "A search for the previous logo path (/assets/generated/truevision-logo-mark.dim_512x512.png) shows no remaining usage outside any explicit fallback logic.",
+        "All branding logo placements (including header/footer) reference the centralized values from frontend/src/config/site.ts.",
+        "All logo <img> elements use appropriate alt text that includes the full brand name (e.g., \"TrueVision Digital Agency\")."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/site/BrandLogo.tsx",
+          "operation": "modify",
+          "description": "Ensure the BrandLogo component standardizes alt text from frontend/src/config/site.ts and is flexible enough to replace remaining branding logo placements without reintroducing hardcoded asset paths."
+        },
+        {
+          "path": "frontend/src/components/site/Layout.tsx",
+          "operation": "modify",
+          "description": "Audit layout-level branding usage and ensure any branding render points (if present now or added later) consume the centrally-configured BrandLogo rather than hardcoded logo asset paths."
+        }
+      ]
+    }
+  ]
+}

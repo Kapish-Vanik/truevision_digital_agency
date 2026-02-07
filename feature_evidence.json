@@ -1,0 +1,78 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-the-official-truevision-digital-agency-logo-as-static-assets-and-reference-them-from-a-central-configuration-so-the-same-logo-is-used-consistently-across-the-site",
+      "featureTitle": "Add the official TrueVision Digital Agency logo as static assets and reference them from a central configuration so the same logo is used consistently across the site.",
+      "files": [
+        "frontend/src/config/site.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-site-header-navbar-branding-to-use-the-official-logo-with-correct-alignment-and-visibility-on-the-premium-dark-neon-theme-including-responsive-behavior-for-mobile-vs-desktop",
+      "featureTitle": "Update the site header (Navbar) branding to use the official logo with correct alignment and visibility on the premium dark + neon theme, including responsive behavior for mobile vs desktop.",
+      "files": [
+        "frontend/src/components/site/BrandLogo.tsx",
+        "frontend/src/components/site/Navbar.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-site-footer-branding-block-to-use-the-official-logo-and-ensure-it-is-properly-aligned-with-the-brand-text-and-consistent-with-the-premium-dark-neon-theme",
+      "featureTitle": "Update the site footer branding block to use the official logo and ensure it is properly aligned with the brand text and consistent with the premium dark + neon theme.",
+      "files": [
+        "frontend/src/components/site/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-any-other-hardcoded-placeholder-branding-logo-usages-where-branding-is-required-to-use-the-same-centrally-configured-official-logo-assets-for-consistency",
+      "featureTitle": "Replace any other hardcoded/placeholder branding logo usages (where branding is required) to use the same centrally-configured official logo assets for consistency.",
+      "files": [
+        "frontend/src/components/site/BrandLogo.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-20"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
