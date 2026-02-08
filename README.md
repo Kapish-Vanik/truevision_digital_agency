@@ -1,2 +1,3 @@
-# truevision_digital_agency
-Official website of TrueVision Digital Agency. Showcasing our digital marketing services including SEO, social media marketing, paid ads, website design, branding, and lead generation for businesses.
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`
